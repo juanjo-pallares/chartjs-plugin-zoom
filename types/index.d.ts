@@ -13,7 +13,7 @@ declare module 'chart.js' {
     zoom: ZoomPluginOptions;
   }
 
-  const enum UpdateModeEnum {
+  enum UpdateModeEnum {
     zoom = 'zoom'
   }
 
@@ -25,7 +25,7 @@ declare module 'chart.js' {
     zoomScale(id: string, range: ScaleRange, mode?: UpdateMode): void;
     resetZoom(mode?: UpdateMode): void;
     getZoomLevel(): number;
-    getInitialScaleBounds(): Record<string, {min: number, max: number}>;
+    getInitialScaleBounds(): Record<string, { min: number, max: number }>;
     isZoomedOrPanned(): boolean;
   }
 }
@@ -54,5 +54,5 @@ export function zoomRect(chart: Chart, p0: Point, p1: Point, mode?: UpdateMode):
 export function zoomScale(chart: Chart, scaleId: string, range: ScaleRange, mode?: UpdateMode): void;
 export function resetZoom(chart: Chart, mode?: UpdateMode): void;
 export function getZoomLevel(chart: Chart): number;
-export function getInitialScaleBounds(chart: Chart): Record<string, {min: number, max: number}>;
+export function getInitialScaleBounds(chart: Chart): Record<string, { min: number, max: number }>;
 export function isZoomedOrPanned(chart: Chart): boolean;
