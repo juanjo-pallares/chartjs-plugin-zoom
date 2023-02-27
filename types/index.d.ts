@@ -10,7 +10,7 @@ type DistributiveArray<T> = [T] extends [unknown] ? Array<T> : never
 declare module 'chart.js' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface PluginOptionsByType<TType extends ChartType> {
-    zoom: ZoomPluginOptions;
+    zoom: any;
   }
 
   enum UpdateModeEnum {
